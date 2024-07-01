@@ -50,12 +50,12 @@ const Restaurant = () => {
           className="opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl font-bold text-center font-hero mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-hero mb-4 text-center"
           >
             Edem Hotel Restaurant
           </motion.h1>
@@ -63,15 +63,17 @@ const Restaurant = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-yellow-500 px-6 py-2 rounded-full"
+            className="bg-yellow-500 px-4 py-2 rounded-full"
           >
-            <h2 className="text-2xl font-bold font-hero">Our Menu</h2>
+            <h2 className="text-xl sm:text-2xl font-bold font-hero">
+              Our Menu
+            </h2>
           </motion.div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {menuSections.map((section, index) => (
             <motion.div
               key={section.title}
@@ -80,12 +82,15 @@ const Restaurant = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gray-900 rounded-lg p-6 shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-yellow-500 mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-500 mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-2">
                 {section.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-white">
+                  <li
+                    key={itemIndex}
+                    className="text-white text-sm sm:text-base"
+                  >
                     {item}
                   </li>
                 ))}

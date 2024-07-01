@@ -39,7 +39,7 @@ const Rooms = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-serif text-center mb-4 text-amber-100"
+          className="lg:text-6xl sm:text-4xl text-2xl  font-serif text-center mb-4 text-amber-100"
         >
           Exquisite Accommodations
         </motion.h1>
@@ -47,7 +47,7 @@ const Rooms = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl text-center mb-16 text-amber-200"
+          className="lg:text-2xl text-sm text-center mb-16 text-amber-200"
         >
           Indulge in unparalleled luxury and comfort
         </motion.p>
@@ -71,12 +71,12 @@ const Rooms = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2 text-amber-100">
+                <h3 className="lg:text-2xl text-xl font-semibold mb-2 text-amber-100">
                   {room.name}
                 </h3>
                 <p className="text-amber-200 mb-4 text-sm">{room.benefits}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-3xl font-bold text-amber-100">
+                  <span className="lg:text-3xl text-2xl font-bold text-amber-100">
                     GHC {room.price}
                   </span>
                 </div>
