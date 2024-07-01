@@ -20,8 +20,7 @@ const Events = () => {
           <p>Available for events</p>
         </div>
       </div>
-      <div className="shadow-xl flex lg:w-[50%] mt-10 lg:mt-0 w-[100%] h-full">
-        {/* ground floor card */}
+      {/* <div className="shadow-xl flex lg:w-[50%] mt-10 lg:mt-0 w-[100%] h-full">
         <div className="w-[50%] ">
           <Image
             src="/bar.jpg"
@@ -35,7 +34,7 @@ const Events = () => {
           <h1 className="text-2xl font-hero">Executive bar</h1>
           <p>Available</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

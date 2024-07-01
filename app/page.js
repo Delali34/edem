@@ -5,6 +5,7 @@ import Scrolltext from "@/components/Scrolltext";
 import Rooms from "@/components/Rooms";
 import Events from "@/components/Events";
 import Restaurant from "@/components/Restaurant";
+import Footer from "@/components/Footer";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <hr className="pt-5" />
       <Events />
       <Restaurant />
+      <Footer />
     </div>
   );
 };
