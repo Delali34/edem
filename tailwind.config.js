@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       hero: ["Georama", "sans-serif"],
+      serif: ["Playfair Display", "serif"],
     },
     extend: {
       backgroundImage: {
@@ -17,5 +18,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

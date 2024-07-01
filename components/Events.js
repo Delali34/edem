@@ -4,9 +4,9 @@ import Image from "next/image";
 const Events = () => {
   return (
     <div className="mt-10 max-w-7xl lg:flex items-center justify-between mx-auto px-5">
-      <div className="shadow-xl flex lg:w-[50%] w-[100%] h-full">
+      <div className="shadow-xl flex  w-[100%] h-full">
         {/* ground floor card */}
-        <div className="lg:w-[50%] w-[100%] ">
+        <div className=" w-[100%] ">
           <Image
             src="/ground.jpeg"
             width={1000}

@@ -15,7 +15,7 @@ const page = () => {
       <Scrolltext />
       <Rooms />
       <hr className="pt-5" />
-      <Events />
+      {/* <Events /> */}
       <Restaurant />
       <Footer />
     </div>
