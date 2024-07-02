@@ -33,7 +33,10 @@ const EdemRooms = [
 
 const Rooms = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-700 py-16">
+    <div
+      id="Rooms"
+      className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-700 py-16"
+    >
       <div className="container mx-auto px-4">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}

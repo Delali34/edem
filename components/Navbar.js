@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link"; // Import Link from next/link
 import { HiBars2 } from "react-icons/hi2";
 import { IoMdClose } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,10 +14,10 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { title: "Home", delay: 0.1 },
-    { title: "About us", delay: 0.2 },
-    { title: "Services", delay: 0.3 },
-    { title: "Gallery", delay: 0.4 },
+    { title: "Home", delay: 0.1, href: "/" },
+
+    { title: "Rooms", delay: 0.2, href: "/#Rooms" },
+    { title: "Restaurant", delay: 0.3, href: "/#Restaurant" },
   ];
 
   const menuVariants = {
@@ -46,17 +47,18 @@ const Navbar = () => {
         </div>
         <div className="lg:flex space-x-5 hidden">
           {menuItems.map((item) => (
-            <h2
-              key={item.title}
-              className="cursor-pointer hover:text-yellow-500 hover:-mt-[0.5px] duration-75"
-            >
-              {item.title}
-            </h2>
+            <Link key={item.title} href={item.href}>
+              <h2 className="cursor-pointer hover:text-yellow-500 hover:-mt-[0.5px] duration-75">
+                {item.title}
+              </h2>
+            </Link>
           ))}
         </div>
-        <div className="bg-yellow-500 py-3 lg:block hidden px-6 hover:bg-black hover:text-white duration-100 cursor-pointer rounded-3xl">
-          Contact us
-        </div>
+        <Link href="/ContactUs" className="lg:block hidden">
+          <div className="bg-yellow-500 py-3 px-6 hover:bg-black hover:text-white duration-100 cursor-pointer rounded-3xl">
+            Contact us
+          </div>
+        </Link>
         {/* mobile section */}
         <div className="lg:hidden block">
           <button onClick={toggleMobileMenu}>
@@ -94,18 +96,23 @@ const Navbar = () => {
                 <IoMdClose className="text-3xl text-yellow-600 hover:text-yellow-800 transition-colors duration-300" />
               </button>
               <div className="flex flex-col space-y-6">
-                {menuItems.map((item, index) => (
-                  <motion.h2
+                {menuItems.map((item) => (
+                  <Link
                     key={item.title}
-                    custom={item.delay}
-                    variants={itemVariants}
-                    initial="closed"
-                    animate="open"
-                    exit="closed"
-                    className="cursor-pointer text-lg font-semibold text-yellow-800 hover:text-yellow-600 transition-colors duration-300"
+                    href={item.href}
+                    onClick={toggleMobileMenu}
                   >
-                    {item.title}
-                  </motion.h2>
+                    <motion.h2
+                      custom={item.delay}
+                      variants={itemVariants}
+                      initial="closed"
+                      animate="open"
+                      exit="closed"
+                      className="cursor-pointer text-lg font-semibold text-yellow-800 hover:text-yellow-600 transition-colors duration-300"
+                    >
+                      {item.title}
+                    </motion.h2>
+                  </Link>
                 ))}
               </div>
               <motion.div
@@ -116,9 +123,11 @@ const Navbar = () => {
                 animate="open"
                 exit="closed"
               >
-                <button className="w-full bg-yellow-500 py-3 px-6 hover:bg-yellow-600 text-white duration-300 cursor-pointer rounded-full text-center font-semibold shadow-md hover:shadow-lg transition-all">
-                  Contact us
-                </button>
+                <Link href="/ContactUs" onClick={toggleMobileMenu}>
+                  <button className="w-full bg-yellow-500 py-3 px-6 hover:bg-yellow-600 text-white duration-300 cursor-pointer rounded-full text-center font-semibold shadow-md hover:shadow-lg transition-all">
+                    Contact us
+                  </button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

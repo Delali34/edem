@@ -40,7 +40,7 @@ const menuSections = [
 
 const Restaurant = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div id="Restaurant" className="min-h-screen bg-black">
       <div className="relative h-screen">
         <Image
           src="/food.jpg"
