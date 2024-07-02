@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -56,6 +57,7 @@ const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
+          <Link href="/ContactUs"></Link>
           Book Now
         </motion.button>
       </div>
