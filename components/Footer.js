@@ -24,22 +24,16 @@ const Footer = () => {
                   </a>
                 </Link>
               </li>
+
               <li>
-                <Link href="/about" legacyBehavior>
-                  <a className="hover:text-white transition duration-300">
-                    About
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/rooms" legacyBehavior>
+                <Link href="#Rooms" legacyBehavior>
                   <a className="hover:text-white transition duration-300">
                     Rooms
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/contact" legacyBehavior>
+                <Link href="/ContactUs" legacyBehavior>
                   <a className="hover:text-white transition duration-300">
                     Contact
                   </a>
